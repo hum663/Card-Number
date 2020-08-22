@@ -15,6 +15,7 @@ ___ ____ _____    ____              _
  | | |     | |   | |   / _` | '__/ _` |
  | | |___  | |   | |__| (_| | | | (_| |
 |___\____| |_|    \____\__,_|_|  \__,_|
+Khaled ali
 
 ";
 echo $blue . "==================================";
@@ -34,15 +35,16 @@ for($x = 0; $x < $count; $x++){
 $str = file_get_contents("http://namegenerators.org/fake-name-generator-us/");
 $var = '/<div class="col2">(.*?)<\/div>/s';
 preg_match_all($var, $str, $matches);
-echo $red . "\n $$$$$$$$$$$$$$$ MORE INFORMATION $$$$$$$$$$$$$$$\n";
+echo $red . "\n _______ MORE INFORMATION ______\n";
 echo $bold . $cyan . "[name : ".str_replace("</span>", "", str_replace('<span class="name">', "", $matches[1][3]))."]".
 		" [address : ".$matches[1][8]."]".
 		" [phone : ".$matches[1][9]."]\n";
-echo $red . "\n $$$$$$$$$$$$$$$ CARD INFORMATION $$$$$$$$$$$$$$$\n";
+echo $red . "\n ____ CARD INFORMATION _____\n";
 echo $bold . $Yellow . "[email : ".$matches[1][10]."]".
 		" [card number : ".str_replace(" ", "", $matches[1][14])."]".
 		" [cvv : ".$matches[1][16]."]".
 		" [exp-date : ".$matches[1][15]."]\n";
 	sleep($sleep);
+_______________________
 }
 ?>
